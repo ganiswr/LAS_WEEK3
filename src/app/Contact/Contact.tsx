@@ -51,7 +51,7 @@ const Contact = () => {
           {/* Contact Information Section */}
           <div className="text-center md:text-left p-4 text-[#000000] md:w-1/2">
             <h1 className="text-4xl font-bold mb-4">Get in Touch</h1>
-            <p className="text-sm mb-8 mt-2">Nice to know you, please contact me and let's be friends!</p>
+            <p className="text-sm mb-8 mt-2">Nice to know you, please contact me and lets be friends!</p>
 
             <div className="text-sm">
               <div className="flex items-center justify-center md:justify-start gap-2 mt-2">

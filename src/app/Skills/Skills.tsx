@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -89,7 +88,7 @@ const Skills = () => {
 
         <div style={{ 
           position: "absolute", 
-          bottom: "40%", 
+          bottom: "30%", 
           left: "50%", 
           transform: "translateX(-50%)", 
           fontSize: "2rem", 
