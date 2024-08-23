@@ -8,8 +8,42 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
+import { HoverEffect } from "@/components/ui/card-hover-effect"; // Adjust the import path if necessary
 
-export default function Home() {
+const items = [
+  {
+    title: "Docker",
+    description: "Docker is a software platform that enables you to build, ship, and run applications inside containers.",
+    link: "https://www.docker.com/",
+  },
+  {
+    title: "Django",
+    description: "Django is a high-level Python web framework that simplifies the development of robust and scalable web applications.",
+    link: "https://www.djangoproject.com/",
+  },
+  {
+    title: "C Language",
+    description: "",
+    link: "https://id.wikipedia.org/wiki/C_(bahasa_pemrograman)",
+  },
+  {
+    title: "Python",
+    description: "",
+    link: "https://www.python.org/",
+  },
+  {
+    title: "Canva",
+    description: "Canva is a graphic design application used to create graphic media, presentations, posters, documents and other visual content.",
+    link: "https://www.canva.com/id_id/",
+  },
+  {
+    title: "Linux",
+    description: "Linux is a family of open-source Unix-like operating systems based on the Linux kernel.",
+    link: "https://www.linux.org/",
+  },
+];
+
+const Skills = () => {
   return (
     <>
       {/* Navbar Section */}
@@ -47,30 +81,15 @@ export default function Home() {
         <h1 style={{ fontWeight: "bold" }}>GANIS WIDYA RENATA</h1>
       </div>
 
+      {/* Background Beams Section */}
       <BackgroundBeamsWithCollision className="min-h-screen w-full">
-        <div className="absolute left-0 top-0 h-full w-1/2 flex items-center justify-center">
-          <Image src="/profilesaya.jpg"
-            alt="Your Alt Text"
-            width={400}
-            height={400}
-            className="rounded-full object-cover"/>
-        </div>
-
-        <div className="text-right p-8 absolute top-1/2 right-0 transform -translate-y-1/2" style={{ width: '50%' }}>
-          <h1 className="text-[#550A35] font-bold text-4xl mb-4">
-            TELKOM UNIVERSITY<br />
-            TELECOMMUNICATIONS
-            ENGINEERING STUDENT
-          </h1>
-          <p className="text-[#550A35] font-normal text-xl mt-4">
-            <span className="text-base">I am a student at Telkom University, Bachelor of Engineering Study Program Telecommunication, Faculty of Electrical Engineering. Have a high interest in learning and adapting to technology which continues to grow. Have the achievement to become a student who graduates with the best grades and have a profession according to the skills they have.<br/>
-            </span>
-          </p>
+        <div style={{ height: '100vh', padding: "10px" }}>
+          <HoverEffect items={items} className="mt-10" />
         </div>
 
         <div style={{ 
           position: "absolute", 
-          bottom: "10px", 
+          bottom: "40%", 
           left: "50%", 
           transform: "translateX(-50%)", 
           fontSize: "2rem", 
@@ -79,7 +98,8 @@ export default function Home() {
           SKILLS
         </div>
       </BackgroundBeamsWithCollision>
-
     </>
   );
 }
+
+export default Skills;

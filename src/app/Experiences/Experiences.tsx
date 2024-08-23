@@ -1,15 +1,45 @@
 import React from 'react';
-import Image from 'next/image';
 import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
+    Breadcrumb,
+    BreadcrumbItem,
+    BreadcrumbLink,
+    BreadcrumbList,
+    BreadcrumbPage,
+    BreadcrumbSeparator,
+  } from "@/components/ui/breadcrumb";
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
+import { HoverEffect } from "@/components/ui/card-hover-effect"; // Adjust the import path if necessary
 
-export default function Home() {
+const items = [
+  {
+    title: "MAJELIS PERWAKILAN KELAS (MPK)",
+    description: "2020 - 2021 | DKOMISI A PENDIDIKAN AGAMA DAN PERIBADATAN.",
+    link: "/Skills",
+  },
+  {
+    title: "MAJELIS PERWAKILAN KELAS (MPK)",
+    description: "2021-2022 | KOORDINATOR KELAS",
+    link: "/Skills",
+  },
+  {
+    title: "PA/PAWAKA (ORAGANISASI KEAGAMAAN)",
+    description: "2021-2022 | SEKRETARIS",
+    link: "/Skills",
+  },
+  {
+    title: "IKASEMA (Ikatan Mahasiswa Semarang)",
+    description: "2024-2025 | Bendahara Roadshow",
+    link: "/Skills",
+  },
+  {
+    title: "NetSchool-NetDev Adaptive Network Laboratory",
+    description: "2023-2024 | Peserta",
+    link: "/Skills",
+  },
+
+];
+
+const Experiences = () => {
   return (
     <>
       {/* Navbar Section */}
@@ -48,38 +78,23 @@ export default function Home() {
       </div>
 
       <BackgroundBeamsWithCollision className="min-h-screen w-full">
-        <div className="absolute left-0 top-0 h-full w-1/2 flex items-center justify-center">
-          <Image src="/profilesaya.jpg"
-            alt="Your Alt Text"
-            width={400}
-            height={400}
-            className="rounded-full object-cover"/>
-        </div>
-
-        <div className="text-right p-8 absolute top-1/2 right-0 transform -translate-y-1/2" style={{ width: '50%' }}>
-          <h1 className="text-[#550A35] font-bold text-4xl mb-4">
-            TELKOM UNIVERSITY<br />
-            TELECOMMUNICATIONS
-            ENGINEERING STUDENT
-          </h1>
-          <p className="text-[#550A35] font-normal text-xl mt-4">
-            <span className="text-base">I am a student at Telkom University, Bachelor of Engineering Study Program Telecommunication, Faculty of Electrical Engineering. Have a high interest in learning and adapting to technology which continues to grow. Have the achievement to become a student who graduates with the best grades and have a profession according to the skills they have.<br/>
-            </span>
-          </p>
+        <div style={{ height: '100vh', padding: "10px" }}>
+          <HoverEffect items={items} className="mt-10" />
         </div>
 
         <div style={{ 
           position: "absolute", 
-          bottom: "10px", 
+          bottom: "40%", 
           left: "50%", 
           transform: "translateX(-50%)", 
           fontSize: "2rem", 
           fontWeight: "bold" 
         }}>
-          SKILLS
+          EXPERIENCES
         </div>
       </BackgroundBeamsWithCollision>
-
     </>
   );
 }
+
+export default Experiences;
